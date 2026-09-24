@@ -1,1 +1,1 @@
-console.log("Gulp працює!");
+console.log("Gulp працює!!");
