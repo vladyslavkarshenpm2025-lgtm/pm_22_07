@@ -31,19 +31,29 @@ function scriptsTask() {
     .pipe(browserSync.stream());
 }
 
-// 4. Оптимізація зображень
+// 4. Оптимізація зображень (із збереженням encoding: false)
 function imagesTask() {
-  return gulp.src('src/imgs/**/*', {encoding: false})
+  return gulp.src('src/imgs/**/*', { encoding: false })
     .pipe(imagemin())
     .pipe(gulp.dest('dist/imgs'));
 }
 
-// 5. Сервер BrowserSync та відслідковування змін (Watcher)
+// 5. Копіювання CSS та JS файлів Bootstrap
+function bootstrapCssTask() {
+  return gulp.src('node_modules/bootstrap/dist/css/bootstrap.min.css')
+    .pipe(gulp.dest('dist/css'));
+}
+
+function bootstrapJsTask() {
+  return gulp.src('node_modules/bootstrap/dist/js/bootstrap.bundle.min.js')
+    .pipe(gulp.dest('dist/js'));
+}
+
+// 6. Сервер BrowserSync та відслідковування змін (Watcher)
 function serveTask() {
   browserSync.init({
     server: { baseDir: './dist' }
   });
-
   gulp.watch('src/**/*.html', htmlTask);
   gulp.watch('src/scss/**/*.scss', stylesTask);
   gulp.watch('src/js/**/*.js', scriptsTask);
@@ -52,6 +62,6 @@ function serveTask() {
 
 // Головний запуск всіх завдань
 exports.default = gulp.series(
-  gulp.parallel(htmlTask, stylesTask, scriptsTask, imagesTask),
+  gulp.parallel(bootstrapCssTask, bootstrapJsTask, htmlTask, stylesTask, scriptsTask, imagesTask),
   serveTask
 );
