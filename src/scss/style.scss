@@ -1,7 +1,102 @@
-body {
-  background-color: #ff0000;
+$accent-color: #d85028;
+$sidebar-bg: #f2f2f2;
 
-  h1 { 
-    color: #fefefe; 
+body {
+  background-color: #8c8c8c; // Темно-сірий фон сторінки як на макеті
+  padding: 40px 0;           // Великий відступ зверху і знизу від країв
+}
+
+// Контейнер резюме з більшими відступами та білим фоном
+.resume-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.sidebar {
+  background-color: $sidebar-bg;
+}
+
+.text-accent {
+  color: $accent-color;
+}
+
+.bg-accent {
+  background-color: $accent-color !important;
+  color: #fff;
+}
+
+// Фотографія з окантовками ЗВЕРХУ та ЗНИЗУ
+.profile-photo-wrapper {
+  border-top: 5px solid $accent-color;
+  border-bottom: 5px solid $accent-color;
+  padding: 0;
+  
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+.accent-line {
+  width: 40px;
+  height: 3px;
+  background-color: $accent-color;
+}
+
+// Стилі для іконок хобі
+.hobby-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 11px;
+  color: #555;
+  
+  img {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 4px;
+  }
+}
+
+// Кругові прогрес-бари для Expertise (неповні кола)
+.skill-circle {
+  position: relative;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  
+  // Помаранчевий скрізь, КРІМ діапазону 110deg - 160deg (правий нижній куток)
+  background: conic-gradient(
+    $accent-color 0deg 110deg, 
+    #e0e0e0 110deg 160deg, 
+    $accent-color 160deg 360deg
+  );
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 63px;
+    height: 63px;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+
+  .skill-text {
+    position: relative;
+    z-index: 1;
+    font-size: 9px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.1;
+    color: #333;
+    padding: 2px;
   }
 }

@@ -3,15 +3,168 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resume Project</title>
-  <!-- Bootstrap CSS перед власними стилями -->
+  <title>Jhon Abirar - Resume</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  @@include('app/components/header.html')
-  <img src="imgs/c33_2.jpg">
-  <!-- Bootstrap JS перед власними скриптами -->
+
+  <!-- Головний обгортковий контейнер з відступами від боків -->
+  <div class="resume-container my-4">
+    <div class="row g-0">
+      
+      <!-- Ліва колонка (Sidebar) -->
+      <aside class="col-md-4 sidebar p-4">
+        <div class="address-box mb-4">
+          <p class="text-accent fw-bold mb-0">Address</p>
+          <p class="small text-muted mb-0">55 Street City/Zip Code - 456</p>
+        </div>
+
+        <!-- Фотографія з помаранчевими окантовками зверху і знизу -->
+        <div class="profile-photo-wrapper mb-4">
+          <img src="imgs\Знімок екрана 2026-10-14 212425.png" alt="Jhon Abirar">
+        </div>
+
+        <!-- Contact -->
+        <section class="mb-4">
+          <h5 class="section-title text-uppercase fw-bold text-dark mb-3">Contact</h5>
+          <ul class="list-unstyled small">
+            <li class="mb-2"><strong>Phone</strong><br><span class="text-muted">+000 123 456 789</span></li>
+            <li class="mb-2"><strong>Email</strong><br><span class="text-muted">urname@gmail.com</span></li>
+            <li class="mb-2"><strong>Website</strong><br><span class="text-muted">urwebsitename.com</span></li>
+          </ul>
+        </section>
+
+        <!-- Reference -->
+        <section class="mb-4">
+          <h5 class="section-title text-uppercase fw-bold text-dark mb-3">Reference</h5>
+          <p class="fw-bold mb-0 text-dark">Sara Taylore</p>
+          <p class="small text-muted mb-0">Director | Company Name</p>
+          <p class="small text-muted">T: +1 234 56789</p>
+        </section>
+
+        <!-- Hobbies (Без рамок, із зображеннями/іконками) -->
+        <section class="mb-4">
+          <h5 class="section-title text-uppercase fw-bold text-dark mb-3">Hobbies</h5>
+          <div class="d-flex justify-content-between text-center">
+            
+            <div class="hobby-item">
+              <!-- Замініть src на шлях до вашої іконки Travel -->
+              <img src="imgs\world.png" alt="Travel">
+              <span>Travel</span>
+            </div>
+
+            <div class="hobby-item">
+              <img src="imgs/headphones.png" alt="Music">
+              <span>Music</span>
+            </div>
+
+            <div class="hobby-item">
+              <img src="imgs\edit.png" alt="Writing">
+              <span>Writing</span>
+            </div>
+
+            <div class="hobby-item">
+              <img src="imgs\strategy.png" alt="Chess">
+              <span>Chess</span>
+            </div>
+
+          </div>
+        </section>
+      </aside>
+
+      <!-- Права колонка (Main Content) -->
+      <main class="col-md-8 p-5">
+        <!-- Header -->
+        <header class="mb-5">
+          <h1 class="display-5 fw-bold text-dark text-uppercase">Jhon<br>Abirar</h1>
+          <div class="accent-line mb-2"></div>
+          <p class="text-muted text-uppercase tracking-wider">UI Designer</p>
+        </header>
+
+        <!-- About Me -->
+        <section class="mb-5">
+          <h5 class="section-title text-uppercase fw-bold text-dark mb-3">About Me</h5>
+          <p class="text-muted small">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo.
+          </p>
+        </section>
+
+        <!-- Education -->
+        <section class="mb-5">
+          <h5 class="section-title text-uppercase fw-bold text-dark mb-3">Education</h5>
+          <div class="row">
+            <div class="col-sm-6 mb-3">
+              <h6 class="fw-bold text-uppercase mb-1">Enter Your Major</h6>
+              <p class="small text-muted mb-1">Name Of Your University</p>
+              <span class="badge bg-light text-dark border">2005-2009</span>
+            </div>
+            <div class="col-sm-6 mb-3">
+              <h6 class="fw-bold text-uppercase mb-1">Enter Your Major</h6>
+              <p class="small text-muted mb-1">Name Of Your University</p>
+              <span class="badge bg-light text-dark border">2009-2011</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Experience -->
+        <section class="mb-5">
+          <h5 class="section-title text-uppercase fw-bold text-dark mb-3">Experience</h5>
+          
+          <div class="mb-4">
+            <h6 class="fw-bold text-dark mb-1">Enter Job Position Here</h6>
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <span class="badge bg-accent">Present</span>
+              <span class="fw-bold text-muted small">Company Name / Location</span>
+            </div>
+            <p class="text-muted small mb-0">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+
+          <div class="mb-4">
+            <h6 class="fw-bold text-dark mb-1">Enter Job Position Here</h6>
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <span class="badge bg-accent">2017 - 2019</span>
+              <span class="fw-bold text-muted small">Company Name / Location</span>
+            </div>
+            <p class="text-muted small mb-0">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+        </section>
+
+        <!-- Expertise (Неповні кола через SCSS conic-gradient) -->
+        <section>
+          <h5 class="section-title text-uppercase fw-bold text-dark mb-3">Expertise</h5>
+          <div class="row text-center">
+            <div class="col-3">
+              <div class="skill-circle">
+                <span class="skill-text">Adobe Photoshop</span>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="skill-circle">
+                <span class="skill-text">Adobe Illustrator</span>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="skill-circle">
+                <span class="skill-text">Adobe InDesign</span>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="skill-circle">
+                <span class="skill-text">Power Point</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+    </div>
+  </div>
+
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/main.js"></script>
 </body>
