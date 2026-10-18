@@ -4,89 +4,116 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jhon Abirar - Resume</title>
+  
+  <!-- Підключення шрифтів Oswald та Open Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Головний обгортковий контейнер з відступами від боків -->
+  <!-- Головний обгортковий контейнер -->
   <div class="resume-container my-4">
     <div class="row g-0">
       
       <!-- Ліва колонка (Sidebar) -->
-      <aside class="col-md-4 sidebar p-4">
-        <div class="address-box mb-4">
-          <p class="text-accent fw-bold mb-0">Address</p>
-          <p class="small text-muted mb-0">55 Street City/Zip Code - 456</p>
-        </div>
-
-        <!-- Фотографія з помаранчевими окантовками зверху і знизу -->
-        <div class="profile-photo-wrapper mb-4">
-          <img src="imgs\Знімок екрана 2026-10-14 212425.png" alt="Jhon Abirar">
-        </div>
-
-        <!-- Contact -->
-        <section class="mb-4">
-          <h5 class="section-title text-uppercase fw-bold text-dark mb-3">Contact</h5>
-          <ul class="list-unstyled small">
-            <li class="mb-2"><strong>Phone</strong><br><span class="text-muted">+000 123 456 789</span></li>
-            <li class="mb-2"><strong>Email</strong><br><span class="text-muted">urname@gmail.com</span></li>
-            <li class="mb-2"><strong>Website</strong><br><span class="text-muted">urwebsitename.com</span></li>
-          </ul>
-        </section>
-
-        <!-- Reference -->
-        <section class="mb-4">
-          <h5 class="section-title text-uppercase fw-bold text-dark mb-3">Reference</h5>
-          <p class="fw-bold mb-0 text-dark">Sara Taylore</p>
-          <p class="small text-muted mb-0">Director | Company Name</p>
-          <p class="small text-muted">T: +1 234 56789</p>
-        </section>
-
-        <!-- Hobbies (Без рамок, із зображеннями/іконками) -->
-        <section class="mb-4">
-          <h5 class="section-title text-uppercase fw-bold text-dark mb-3">Hobbies</h5>
-          <div class="d-flex justify-content-between text-center">
-            
-            <div class="hobby-item">
-              <!-- Замініть src на шлях до вашої іконки Travel -->
-              <img src="imgs\world.png" alt="Travel">
-              <span>Travel</span>
-            </div>
-
-            <div class="hobby-item">
-              <img src="imgs/headphones.png" alt="Music">
-              <span>Music</span>
-            </div>
-
-            <div class="hobby-item">
-              <img src="imgs\edit.png" alt="Writing">
-              <span>Writing</span>
-            </div>
-
-            <div class="hobby-item">
-              <img src="imgs\strategy.png" alt="Chess">
-              <span>Chess</span>
-            </div>
-
+      <aside class="col-md-4 sidebar">
+        <div class="sidebar-padding">
+          <!-- Address -->
+          <div class="address-box mb-4">
+            <p class="text-accent fw-bold mb-1">Address</p>
+            <p class="small text-muted mb-0">SS Sterrt City/Zip Code - 456</p>
           </div>
-        </section>
+        </div>
+
+        <!-- Фотографія з помаранчевими окантовками на всю ширину сайдбару -->
+        <div class="profile-photo-wrapper mb-4">
+          <img src="imgs/Знімок екрана 2026-10-14 212425.png" alt="Jhon Abirar">
+        </div>
+
+        <div class="sidebar-padding">
+          <!-- Contact -->
+          <section class="mb-4">
+            <h5 class="section-title text-uppercase fw-bold text-dark mb-3">Contact</h5>
+            <ul class="list-unstyled small mb-0">
+              <li class="mb-2">
+                <div class="fw-bold text-dark">Phone</div>
+                <div class="text-muted">+000 123 456 789</div>
+              </li>
+              <li class="mb-2">
+                <div class="fw-bold text-dark">Email</div>
+                <div class="text-muted">umame@gmail.com</div>
+              </li>
+              <li class="mb-2">
+                <div class="fw-bold text-dark">Website</div>
+                <div class="text-muted">urwebsitename.com</div>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Reference -->
+          <section class="mb-4">
+            <h5 class="section-title text-uppercase fw-bold text-dark mb-3">Reference</h5>
+            <div class="fw-bold text-dark">Sara Taylore</div>
+            <div class="small text-muted">Director | Company Name</div>
+            <div class="small text-muted">T : +1 234 56789</div>
+          </section>
+
+          <!-- Hobbies -->
+          <section class="mb-4">
+            <h5 class="section-title text-uppercase fw-bold text-dark mb-3">Hobbies</h5>
+            <div class="d-flex justify-content-between align-items-center text-center">
+              
+              <div class="hobby-item">
+                <div class="hobby-icon-circle">
+                  <img src="imgs/world.png" alt="Travel">
+                </div>
+                <span>Travel</span>
+              </div>
+
+              <div class="hobby-item">
+                <div class="hobby-icon-circle">
+                  <img src="imgs/headphones.png" alt="Music">
+                </div>
+                <span>Music</span>
+              </div>
+
+              <div class="hobby-item">
+                <div class="hobby-icon-circle">
+                  <img src="imgs/edit.png" alt="Writing">
+                </div>
+                <span>Writing</span>
+              </div>
+
+              <div class="hobby-item">
+                <div class="hobby-icon-circle">
+                  <img src="imgs/strategy.png" alt="Chess">
+                </div>
+                <span>Chess</span>
+              </div>
+
+            </div>
+          </section>
+        </div>
       </aside>
 
       <!-- Права колонка (Main Content) -->
-      <main class="col-md-8 p-5">
+      <main class="col-md-8 main-content">
         <!-- Header -->
         <header class="mb-5">
-          <h1 class="display-5 fw-bold text-dark text-uppercase">Jhon<br>Abirar</h1>
+          <h1 class="main-name text-dark text-uppercase fw-bold mb-1">Jhon<br>Abirar</h1>
           <div class="accent-line mb-2"></div>
-          <p class="text-muted text-uppercase tracking-wider">UI Designer</p>
+          <p class="job-title text-uppercase tracking-wider mb-0">UI Designer</p>
         </header>
 
         <!-- About Me -->
         <section class="mb-5">
           <h5 class="section-title text-uppercase fw-bold text-dark mb-3">About Me</h5>
-          <p class="text-muted small">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo.
+          <p class="text-muted small leading-relaxed mb-0">
+            Lorem ipsum dolor a consectetur adipiscing elitse eiusmod tempor incididunt labore dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
           </p>
         </section>
 
@@ -95,14 +122,14 @@
           <h5 class="section-title text-uppercase fw-bold text-dark mb-3">Education</h5>
           <div class="row">
             <div class="col-sm-6 mb-3">
-              <h6 class="fw-bold text-uppercase mb-1">Enter Your Major</h6>
+              <h6 class="fw-bold text-uppercase mb-1 entry-subtitle">Enter Your Major</h6>
               <p class="small text-muted mb-1">Name Of Your University</p>
-              <span class="badge bg-light text-dark border">2005-2009</span>
+              <p class="small text-muted mb-0">2005-2009</p>
             </div>
             <div class="col-sm-6 mb-3">
-              <h6 class="fw-bold text-uppercase mb-1">Enter Your Major</h6>
+              <h6 class="fw-bold text-uppercase mb-1 entry-subtitle">Enter Your Major</h6>
               <p class="small text-muted mb-1">Name Of Your University</p>
-              <span class="badge bg-light text-dark border">2009-2011</span>
+              <p class="small text-muted mb-0">2009-2011</p>
             </div>
           </div>
         </section>
@@ -112,54 +139,83 @@
           <h5 class="section-title text-uppercase fw-bold text-dark mb-3">Experience</h5>
           
           <div class="mb-4">
-            <h6 class="fw-bold text-dark mb-1">Enter Job Position Here</h6>
+            <h6 class="fw-bold text-dark mb-2 entry-subtitle">Enter Job Position Here</h6>
             <div class="d-flex align-items-center gap-2 mb-2">
-              <span class="badge bg-accent">Present</span>
-              <span class="fw-bold text-muted small">Company Name / Location</span>
+              <span class="custom-badge bg-accent">Present</span>
+              <span class="fw-bold text-dark small">Company Name / Location</span>
             </div>
             <p class="text-muted small mb-0">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Lorem ipsum dolor sit amet, this isthis is a thena consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
             </p>
           </div>
 
           <div class="mb-4">
-            <h6 class="fw-bold text-dark mb-1">Enter Job Position Here</h6>
+            <h6 class="fw-bold text-dark mb-2 entry-subtitle">Enter Job Position Here</h6>
             <div class="d-flex align-items-center gap-2 mb-2">
-              <span class="badge bg-accent">2017 - 2019</span>
-              <span class="fw-bold text-muted small">Company Name / Location</span>
+              <span class="custom-badge bg-accent">2017 - 2019</span>
+              <span class="fw-bold text-dark small">Company Name / Location</span>
             </div>
             <p class="text-muted small mb-0">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Lorem ipsum dolor sit amet, this isthis isa a thena consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
             </p>
           </div>
         </section>
 
-        <!-- Expertise (Неповні кола через SCSS conic-gradient) -->
-        <section>
-          <h5 class="section-title text-uppercase fw-bold text-dark mb-3">Expertise</h5>
-          <div class="row text-center">
-            <div class="col-3">
-              <div class="skill-circle">
-                <span class="skill-text">Adobe Photoshop</span>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="skill-circle">
-                <span class="skill-text">Adobe Illustrator</span>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="skill-circle">
-                <span class="skill-text">Adobe InDesign</span>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="skill-circle">
-                <span class="skill-text">Power Point</span>
-              </div>
-            </div>
-          </div>
-        </section>
+        <!-- Expertise (Кругові діаграми) -->
+<section>
+  <h5 class="section-title text-uppercase fw-bold text-dark mb-4">Expertise</h5>
+  <div class="row text-center g-3">
+    
+    <!-- Adobe Photoshop -->
+    <div class="col-6 col-sm-3">
+      <div class="skill-circle-container">
+        <svg class="skill-svg" viewBox="0 0 100 100">
+          <circle class="skill-bg" cx="50" cy="50" r="40"></circle>
+          <circle class="skill-bar-border" cx="50" cy="50" r="40" style="--percent: 82;"></circle>
+          <circle class="skill-bar" cx="50" cy="50" r="40" style="--percent: 82;"></circle>
+        </svg>
+        <div class="skill-text">Adobe<br>photoshop</div>
+      </div>
+    </div>
+
+    <!-- Adobe Illustrator -->
+    <div class="col-6 col-sm-3">
+      <div class="skill-circle-container">
+        <svg class="skill-svg" viewBox="0 0 100 100">
+          <circle class="skill-bg" cx="50" cy="50" r="40"></circle>
+          <circle class="skill-bar-border" cx="50" cy="50" r="40" style="--percent: 75;"></circle>
+          <circle class="skill-bar" cx="50" cy="50" r="40" style="--percent: 75;"></circle>
+        </svg>
+        <div class="skill-text">Adobe<br>illustrator</div>
+      </div>
+    </div>
+
+    <!-- Adobe Indesign -->
+    <div class="col-6 col-sm-3">
+      <div class="skill-circle-container">
+        <svg class="skill-svg" viewBox="0 0 100 100">
+          <circle class="skill-bg" cx="50" cy="50" r="40"></circle>
+          <circle class="skill-bar-border" cx="50" cy="50" r="40" style="--percent: 68;"></circle>
+          <circle class="skill-bar" cx="50" cy="50" r="40" style="--percent: 68;"></circle>
+        </svg>
+        <div class="skill-text">Adobe<br>indesign</div>
+      </div>
+    </div>
+
+    <!-- Power Point -->
+    <div class="col-6 col-sm-3">
+      <div class="skill-circle-container">
+        <svg class="skill-svg" viewBox="0 0 100 100">
+          <circle class="skill-bg" cx="50" cy="50" r="40"></circle>
+          <circle class="skill-bar-border" cx="50" cy="50" r="40" style="--percent: 78;"></circle>
+          <circle class="skill-bar" cx="50" cy="50" r="40" style="--percent: 78;"></circle>
+        </svg>
+        <div class="skill-text">Power<br>point</div>
+      </div>
+    </div>
+
+  </div>
+</section>
       </main>
 
     </div>
