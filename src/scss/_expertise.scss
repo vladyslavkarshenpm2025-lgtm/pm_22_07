@@ -1,0 +1,52 @@
+.skill-circle-container {
+  position: relative;
+  @include circle-size(90px);
+  margin: 0 auto;
+  @include flex-center;
+}
+
+.skill-svg {
+  width: 100%;
+  height: 100%;
+  transform: scaleY(-1);
+  transform-origin: center;
+
+  circle {
+    fill: none;
+  }
+
+  .skill-bg {
+    stroke: $circle-bg;
+    stroke-width: 7;
+  }
+
+  .skill-bar-border {
+    stroke: $bg-white;
+    stroke-width: 13;
+    stroke-linecap: round;
+    stroke-dashoffset: 0;
+    stroke-dasharray: calc(251.33px * var(--percent) / 100) 251.33px;
+  }
+
+  .skill-bar {
+    stroke: $accent-color;
+    stroke-width: 7;
+    stroke-linecap: round;
+    stroke-dashoffset: 0;
+    stroke-dasharray: calc(251.33px * var(--percent) / 100) 251.33px;
+  }
+}
+
+.skill-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.6rem;
+  font-weight: 600;
+  line-height: 1.15;
+  color: #333;
+  text-align: center;
+  width: 100%;
+  padding: 0 5px;
+}

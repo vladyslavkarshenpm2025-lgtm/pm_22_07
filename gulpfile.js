@@ -2,6 +2,7 @@ const gulp = require('gulp');
 const fileInclude = require('gulp-file-include');
 const sass = require('gulp-sass')(require('sass'));
 const cleanCSS = require('gulp-clean-css');
+const rename = require('gulp-rename'); // Додано для перейменування файлу
 const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
 const browserSync = require('browser-sync').create();
@@ -14,11 +15,12 @@ function htmlTask() {
     .pipe(browserSync.stream());
 }
 
-// 2. Компіляція SCSS в CSS + мініфікація
+// 2. Компіляція головного SCSS в index.min.css
 function stylesTask() {
-  return gulp.src('src/scss/**/*.scss')
+  return gulp.src('src/scss/main.scss') // Беремо тільки головний файл
     .pipe(sass().on('error', sass.logError))
     .pipe(cleanCSS())
+    .pipe(rename('index.min.css')) // Задаємо назву за вимогами лабораторної
     .pipe(gulp.dest('dist/css'))
     .pipe(browserSync.stream());
 }
@@ -31,7 +33,7 @@ function scriptsTask() {
     .pipe(browserSync.stream());
 }
 
-// 4. Оптимізація зображень (із збереженням encoding: false)
+// 4. Оптимізація зображень
 function imagesTask() {
   return gulp.src('src/imgs/**/*', { encoding: false })
     .pipe(imagemin())
@@ -55,7 +57,7 @@ function serveTask() {
     server: { baseDir: './dist' }
   });
   gulp.watch('src/**/*.html', htmlTask);
-  gulp.watch('src/scss/**/*.scss', stylesTask);
+  gulp.watch('src/scss/**/*.scss', stylesTask); // Слідкує за всіма .scss, але запускає збірку через main.scss
   gulp.watch('src/js/**/*.js', scriptsTask);
   gulp.watch('src/imgs/*', imagesTask);
 }

@@ -1,0 +1,44 @@
+.sidebar {
+  background-color: $sidebar-bg;
+}
+
+.sidebar-padding {
+  padding: $sidebar-padding-v ($sidebar-padding-v - 5px);
+}
+
+.profile-photo-wrapper {
+  border-top: $border-accent-width solid $accent-color;
+  border-bottom: $border-accent-width solid $accent-color;
+  padding: 0;
+  width: 100%;
+  
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+}
+
+.hobby-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 11px;
+  color: #444;
+  font-weight: 600;
+  
+  .hobby-icon-circle {
+    @include circle-size(32px);
+    @include flex-center;
+    border: 1px solid $accent-color;
+    margin-bottom: 6px;
+    
+    img {
+      width: 16px;
+      height: 16px;
+      object-fit: contain;
+      filter: invert(38%) sepia(85%) saturate(1475%) hue-rotate(346deg) brightness(90%) contrast(88%);
+    }
+  }
+}

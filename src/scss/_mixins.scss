@@ -1,0 +1,13 @@
+// Міксін для Flexbox-центрирування
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Міксін для створення круглих блоків
+@mixin circle-size($size) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+}
