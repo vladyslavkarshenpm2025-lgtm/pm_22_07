@@ -36,3 +36,62 @@
   border-radius: 3px;
   line-height: 1.4;
 }
+
+// Службовий клас для приховування контенту
+.is-collapsed {
+  display: none !important;
+}
+
+// Кнопка-стрілка біля заголовка секції
+.toggle-arrow-btn {
+  background: transparent;
+  border: none;
+  padding: 0 6px;
+  margin-left: 8px;
+  cursor: pointer;
+  color: $accent-color;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease, color 0.2s ease;
+
+  &:hover {
+    color: $text-dark;
+  }
+
+  // Клас обертання стрілки
+  &.is-rotated {
+    transform: rotate(180deg);
+  }
+}
+
+// Приклад стилів для згенерованих карток/пунктів списку
+.dynamic-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.dynamic-item {
+  padding: 10px 14px;
+  margin-bottom: 10px;
+  border-left: 3px solid $accent-color;
+  background-color: #fafafa;
+
+  &__title {
+    font-weight: 700;
+    color: $text-dark;
+    margin-bottom: 2px;
+  }
+
+  &__meta {
+    font-size: 0.85rem;
+    color: $text-muted;
+    margin-bottom: 4px;
+  }
+
+  &__desc {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+  }
+}
